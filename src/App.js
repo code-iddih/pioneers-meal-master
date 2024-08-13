@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Home from './components/Home';
-import CategoryList from './components/CategoryList';
+import CategoryList from './components/CategoryList'; // Import CategoryList
 import CategoryDetail from './components/CategoryDetail';
 import Recipe from './components/Recipe';
 import UserProfile from './components/UserProfile';
@@ -16,7 +16,6 @@ import './App.css';
 function App() {
   const handleSearch = (query) => {
     console.log('Search query:', query);
-    // Implement search logic
   };
 
   return (

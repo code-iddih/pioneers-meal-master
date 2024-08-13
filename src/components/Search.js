@@ -26,3 +26,4 @@ function Search({ onSearch }) {
 }
 
 export default Search;
+

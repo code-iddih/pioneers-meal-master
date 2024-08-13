@@ -1,27 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 function Recipe() {
-  const { idMeal } = useParams();
+  const { idMeal } = useParams();  // Assuming idMeal maps to a recipe URI or ID
   const [recipe, setRecipe] = useState(null);
 
   useEffect(() => {
-    axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`)
-      .then(response => {
-        setRecipe(response.data.meals[0]);
-      })
-      .catch(error => console.error('Error fetching recipe:', error));
+    const fetchRecipe = async () => {
+      try {
+        const response = await axios.get(`https://api.edamam.com/search`, {
+          params: {
+            r: idMeal,  // Use the recipe URI for detailed fetching
+            app_id: '2abc928f',
+            app_key: '553e1b957cfe9951931e0eb383665e8d'
+          }
+        });
+        setRecipe(response.data.hits[0].recipe);
+      } catch (error) {
+        console.error('Error fetching recipe:', error);
+      }
+    };
+
+    fetchRecipe();
   }, [idMeal]);
 
   if (!recipe) return <p>Loading...</p>;
 
   return (
     <div>
-      <h1>{recipe.strMeal}</h1>
-      <img src={recipe.strMealThumb} alt={recipe.strMeal} />
-      <p>{recipe.strInstructions}</p>
+      <h1>{recipe.label}</h1>
+      <img src={recipe.image} alt={recipe.label} />
+      <p>{recipe.ingredientLines.join(', ')}</p>
+      <p>{recipe.instructions}</p>
     </div>
   );
 }
