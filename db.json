@@ -1,0 +1,83 @@
+{
+    "categories": [
+      {
+        "idCategory": "1",
+        "strCategory": "Beef",
+        "strCategoryThumb": "https://www.themealdb.com/images/category/beef.png"
+      },
+      {
+        "idCategory": "2",
+        "strCategory": "Chicken",
+        "strCategoryThumb": "https://www.themealdb.com/images/category/chicken.png"
+      },
+      {
+        "idCategory": "3",
+        "strCategory": "Seafood",
+        "strCategoryThumb": "https://www.themealdb.com/images/category/seafood.png"
+      },
+      {
+        "idCategory": "4",
+        "strCategory": "Vegetarian",
+        "strCategoryThumb": "https://www.themealdb.com/images/category/vegetarian.png"
+      }
+    ],
+    "meals": [
+      {
+        "idMeal": "1",
+        "idCategory": "1",
+        "strMeal": "Beef Wellington",
+        "strMealThumb": "https://www.themealdb.com/images/media/meals/3r6v2v1579547155.jpg",
+        "strInstructions": "A delicious beef Wellington recipe."
+      },
+      {
+        "idMeal": "2",
+        "idCategory": "1",
+        "strMeal": "Beef Stroganoff",
+        "strMealThumb": "https://www.themealdb.com/images/media/meals/1548772327.jpg",
+        "strInstructions": "A creamy beef stroganoff recipe."
+      },
+      {
+        "idMeal": "3",
+        "idCategory": "2",
+        "strMeal": "Chicken Curry",
+        "strMealThumb": "https://www.themealdb.com/images/media/meals/4i8a3k1582820567.jpg",
+        "strInstructions": "A spicy and flavorful chicken curry."
+      },
+      {
+        "idMeal": "4",
+        "idCategory": "2",
+        "strMeal": "Chicken Alfredo",
+        "strMealThumb": "https://www.themealdb.com/images/media/meals/1524874127.jpg",
+        "strInstructions": "A creamy chicken Alfredo pasta."
+      },
+      {
+        "idMeal": "5",
+        "idCategory": "3",
+        "strMeal": "Grilled Salmon",
+        "strMealThumb": "https://www.themealdb.com/images/media/meals/1549784917.jpg",
+        "strInstructions": "A simple grilled salmon recipe."
+      },
+      {
+        "idMeal": "6",
+        "idCategory": "3",
+        "strMeal": "Seafood Paella",
+        "strMealThumb": "https://www.themealdb.com/images/media/meals/1548774937.jpg",
+        "strInstructions": "A traditional Spanish seafood paella."
+      },
+      {
+        "idMeal": "7",
+        "idCategory": "4",
+        "strMeal": "Vegetable Stir Fry",
+        "strMealThumb": "https://www.themealdb.com/images/media/meals/1524880077.jpg",
+        "strInstructions": "A quick and healthy vegetable stir fry."
+      },
+      {
+        "idMeal": "8",
+        "idCategory": "4",
+        "strMeal": "Vegetarian Chili",
+        "strMealThumb": "https://www.themealdb.com/images/media/meals/1524881108.jpg",
+        "strInstructions": "A hearty vegetarian chili recipe."
+      }
+    ]
+  }
+  

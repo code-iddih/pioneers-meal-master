@@ -3,36 +3,25 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 function Recipe() {
-  const { idMeal } = useParams();  // Assuming idMeal maps to a recipe URI or ID
+  const { idMeal } = useParams();
   const [recipe, setRecipe] = useState(null);
 
   useEffect(() => {
-    const fetchRecipe = async () => {
-      try {
-        const response = await axios.get(`https://api.edamam.com/search`, {
-          params: {
-            r: idMeal,  // Use the recipe URI for detailed fetching
-            app_id: '2abc928f',
-            app_key: '553e1b957cfe9951931e0eb383665e8d'
-          }
-        });
-        setRecipe(response.data.hits[0].recipe);
-      } catch (error) {
-        console.error('Error fetching recipe:', error);
-      }
-    };
-
-    fetchRecipe();
+    axios.get('http://localhost:5000/meals')
+      .then(response => {
+        const selectedRecipe = response.data.find(meal => meal.idMeal === idMeal);
+        setRecipe(selectedRecipe);
+      })
+      .catch(error => console.error('Error fetching recipe:', error));
   }, [idMeal]);
 
   if (!recipe) return <p>Loading...</p>;
 
   return (
     <div>
-      <h1>{recipe.label}</h1>
-      <img src={recipe.image} alt={recipe.label} />
-      <p>{recipe.ingredientLines.join(', ')}</p>
-      <p>{recipe.instructions}</p>
+      <h1>{recipe.strMeal}</h1>
+      <img src={recipe.strMealThumb} alt={recipe.strMeal} />
+      <p>{recipe.strInstructions}</p>
     </div>
   );
 }
