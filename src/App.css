@@ -1,27 +1,205 @@
+/* General body styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* Light gray background for better contrast */
+  color: #333;
+}
+
+/* Main container styling */
+.App {
+  text-align: center;
+  padding: 0 2rem; /* Added more padding for better spacing */
+}
+
+/* Header styling */
+header {
+  background-color: #6ce05c; /* Darker header color for better contrast */
+  color: white;
+  padding: 1rem;
+  border-bottom: 4px solid #444;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem; /* Larger font size for better visibility */
+  font-weight: bold; /* Make the header text bolder */
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 4px solid #131212;
+}
+
+/* Navbar styling */
 nav {
-    background: #333;
-    padding: 10px;
-    color: #fff;
-  }
-  
-  nav a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 20px;
-  }
-  
-  img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-  }
-  
+  background-color: #333; /* Dark background for navbar */
+  padding: 1rem;
+  border-bottom: 4px solid #444;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 1.5rem; /* Increased spacing between items */
+}
+
+nav ul li a {
+  color: #d39f5b;
+  text-decoration: none;
+  font-size: 1.2rem; /* Increased font size for better readability */
+  font-weight: bold; /* Bolder text for visibility */
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #4caf50; /* Green color on hover */
+}
+
+/* Main content styling */
+main {
+  padding: 2rem;
+  background-color: #d8f769;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Deeper shadow for better separation */
+  margin-bottom: 2rem;
+}
+
+/* Form styling */
+form {
+  margin-bottom: 2rem; /* Increased margin for spacing */
+}
+
+input[type="text"] {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #b3a7a7;
+  border-radius: 4px;
+  width: calc(100% - 150px); /* Adjusted width to fit properly */
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #333; /* Dark button background */
+  color: rgb(39, 16, 16);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4caf50; /* Green color on hover */
+}
+
+/* List styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #cedb95;
+  border: 1px solid #b4e8f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Deeper shadow for better separation */
+}
+
+/* Recipe image styling */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Recipe card styling */
+.recipe-card {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Deeper shadow for better separation */
+}
+
+.recipe-card h2 {
+  color: #333;
+  font-size: 1.5rem; /* Slightly larger font size */
+}
+
+.recipe-card p {
+  color: #555;
+}
+
+/* Category List styling */
+.category-list {
+  padding: 2rem; /* Increased padding for better spacing */
+}
+
+.category-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Increased gap between items */
+}
+
+.category-list li {
+  flex: 1 1 calc(25% - 1.5rem);
+  box-sizing: border-box;
+  background: #fff;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Deeper shadow for better separation */
+}
+
+.category-list img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Specific styling for the search results */
+.search-results {
+  padding: 2rem; /* Increased padding for better spacing */
+}
+
+.search-results ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Increased gap between items */
+}
+
+.search-results li {
+  flex: 1 1 calc(25% - 1.5rem);
+  box-sizing: border-box;
+  background: #fff;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Deeper shadow for better separation */
+}
+
+.search-results img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Meal Plan styling */
+.meal-plan {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Deeper shadow for better separation */
+  padding: 2rem; /* Increased padding for better spacing */
+  margin-bottom: 2rem;
+}

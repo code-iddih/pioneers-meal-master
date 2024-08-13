@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+
 
 function CategoryList() {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/categories')
+    axios.get('/api/categories')
       .then(response => {
         setCategories(response.data);
         setLoading(false);
@@ -20,7 +21,7 @@ function CategoryList() {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div>
+    <div className="category-list">
       <h1>Categories</h1>
       <ul>
         {categories.map(category => (

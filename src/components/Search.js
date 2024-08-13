@@ -12,8 +12,7 @@ function Search() {
     try {
       const response = await axios.get('/api/meals'); // Fetch all meals from the local JSON
       const filteredResults = response.data.filter(meal =>
-        meal.strMeal.toLowerCase().includes(query.toLowerCase()) ||
-        meal.strCategory.toLowerCase().includes(query.toLowerCase())
+        meal.strMeal.toLowerCase().includes(query.toLowerCase())
       );
       setResults(filteredResults);
     } catch (error) {
@@ -29,7 +28,7 @@ function Search() {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search recipes or categories"
+          placeholder="Search for recipes"
         />
         <button type="submit">Search</button>
       </form>
@@ -42,6 +41,12 @@ function Search() {
               <li key={meal.idMeal}>
                 <h2>{meal.strMeal}</h2>
                 <img src={meal.strMealThumb} alt={meal.strMeal} />
+                <p>{meal.strInstructions}</p>
+                <ul>
+                  {Object.keys(meal).filter(key => key.startsWith('strIngredient') && meal[key]).map((key, index) => (
+                    <li key={index}>{meal[key]}</li>
+                  ))}
+                </ul>
               </li>
             ))
           ) : (
