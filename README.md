@@ -1,72 +1,68 @@
-# Meal-Master
-
-Meal Master is a React-based web application designed to help users explore meal categories, view detailed recipes, and manage meal plans. The app integrates with the MealDB API to fetch and display meal-related information and provides features for user authentication and feedback submission.
-
+Meal Master
+Overview
+Meal Master is a React application that allows users to explore various meal categories, view recipes, and manage their meal plans. The app fetches data from a local db.json file using json-server for a fast and simple backend solution.
 
 Features
-Meal Categories: Browse a list of meal categories and explore available recipes.
-Recipe Details: View detailed information about individual recipes.
-User Authentication: Login functionality for accessing personalized features.
-Meal Planning: Interactive calendar to help plan meals.
-Feedback Form: Submit feedback about the application.
-User Profile: View and manage user profile details.
-Technologies
-React: JavaScript library for building user interfaces.
-React Router: For handling routing and navigation within the app.
-Axios: HTTP client for making API requests.
-React Calendar: For the meal planning interface.
-Webpack: Module bundler used in development.
+Category List: Browse different meal categories.
+Category Detail: View meals under a specific category.
+Recipe Details: View detailed recipes including ingredients and instructions.
+Search: Search for recipes or categories.
+User Profile: View and manage user profile information.
+Meal Plan: Plan your meals using a calendar interface.
+Feedback Form: Submit feedback about the app.
+Login: User login functionality.
+Setup Instructions
+Prerequisites
+Node.js and npm installed on your machine.
+json-server for serving the local db.json file.
 Installation
-To set up the project locally, follow these steps:
-
 Clone the Repository:
 
-bash
 Copy code
 git clone https://github.com/Thazar-r/Meal-Master.git
-Navigate to the Project Directory:
-
-bash
-Copy code
 cd Meal-Master
 Install Dependencies:
 
-bash
 Copy code
 npm install
-Start the Development Server:
 
-bash
+tart json-server:
+
+In a separate terminal window, start the json-server to serve db.json:
+
+Copy code
+npx json-server --watch db.json --port 5000
+Run the Development Server:
+
+Start the React development server:
+
 Copy code
 npm start
-Open your browser and navigate to http://localhost:3000 to view the app.
+This will launch the app in your default browser, typically accessible at http://localhost:3000.
 
-Usage
-Home Page: View a welcome message and explore meal categories.
-Category List: Click on a category to see a list of recipes associated with it.
-Recipe Details: Click on a recipe to view its detailed information.
-Meal Plan: Use the calendar to plan and manage meals.
-Login: Access the login page to authenticate users.
-Feedback: Provide feedback using the feedback form.
-Profile: View and update user profile information.
-API Integration
-The application uses the MealDB API to retrieve meal data.
+Development
+To contribute to the project or make changes:
 
-API Endpoints:
+Create a New Branch:
 
-Categories: https://www.themealdb.com/api/json/v1/1/categories.php
-Filter by Category: https://www.themealdb.com/api/json/v1/1/filter.php?c=${idCategory}
-Recipe Details: https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}
+Copy code
+git checkout -b feature/your-feature
+Make Changes and Commit:
+
+Copy code
+git add .
+git commit -m "Describe your changes"
+Push to GitHub:
+
+Copy code
+git push origin feature/your-feature
+Create a Pull Request:
+
+Go to the GitHub repository and open a new pull request.
+
 Troubleshooting
-API Fetch Errors: Ensure that the API endpoints are correct and that your internet connection is stable.
-CORS Issues: If encountering CORS issues, verify that the API server supports cross-origin requests or consider using a proxy.
-Contributing
-Contributions are welcome! To contribute:
-
-Fork the repository.
-Create a new branch (git checkout -b feature-branch).
-Commit your changes (git commit -am 'Add new feature').
-Push to the branch (git push origin feature-branch).
-Open a Pull Request.
+No Recipes Displayed: Ensure that json-server is running and the API endpoint is correct.
+Search Not Working: Verify that the search logic in Search.js matches the structure of your db.json.
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
