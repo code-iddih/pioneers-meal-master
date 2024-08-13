@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 
 function FeedbackForm() {
@@ -5,7 +6,7 @@ function FeedbackForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Implement feedback submission logic here
+    // Implement feedback submission logic
     console.log('Feedback submitted:', feedback);
   };
 

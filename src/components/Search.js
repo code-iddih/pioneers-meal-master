@@ -1,11 +1,15 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 function Search({ onSearch }) {
   const [query, setQuery] = useState('');
 
   const handleSearch = (e) => {
     e.preventDefault();
-    onSearch(query);
+    if (typeof onSearch === 'function') {
+      onSearch(query);
+    } else {
+      console.error('onSearch prop is not a function');
+    }
   };
 
   return (

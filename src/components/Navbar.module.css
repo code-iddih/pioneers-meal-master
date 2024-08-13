@@ -1,0 +1,17 @@
+.nav {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  

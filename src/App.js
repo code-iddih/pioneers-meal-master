@@ -1,3 +1,4 @@
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
@@ -13,6 +14,11 @@ import FeedbackForm from './components/FeedbackForm';
 import './App.css';
 
 function App() {
+  const handleSearch = (query) => {
+    console.log('Search query:', query);
+    // Implement search logic
+  };
+
   return (
     <div className="App">
       <Header />
@@ -25,7 +31,7 @@ function App() {
         <Route path="/profile" element={<UserProfile />} />
         <Route path="/meal-plan" element={<MealPlan />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/search" element={<Search />} />
+        <Route path="/search" element={<Search onSearch={handleSearch} />} />
         <Route path="/feedback" element={<FeedbackForm />} />
       </Routes>
     </div>

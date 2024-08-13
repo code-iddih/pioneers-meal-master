@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 
 function Login() {
@@ -6,7 +7,7 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Implement login logic here
+    // Implement login logic
     console.log('Logging in with', { email, password });
   };
 

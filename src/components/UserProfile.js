@@ -1,8 +1,10 @@
+import React from 'react';
+
 function UserProfile() {
-    // For demo purposes, static user data is shown
+    // For demo purposes
     const user = {
-      name: "John Doe",
-      email: "john.doe@example.com"
+      name: "Melchior",
+      email: "melchior@example.com"
     };
   
     return (
