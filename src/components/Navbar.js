@@ -11,7 +11,6 @@ function Navbar() {
         <li><Link className="navbar-link" to="/profile">Profile</Link></li>
         <li><Link className="navbar-link" to="/search">Search</Link></li>
         <li><Link className="navbar-link" to="/feedback">Feedback</Link></li>
-        <li><Link className="navbar-link" to="/login">Login</Link></li>
       </ul>
     </nav>
   );

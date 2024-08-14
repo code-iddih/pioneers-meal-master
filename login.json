@@ -1,0 +1,22 @@
+{
+    "users": [
+      {
+        "id": "0c0b",
+        "username": "kil",
+        "email": "idinyamwaya@gmail.com",
+        "password": "kkkkiiii"
+      },
+      {
+        "id": "2230",
+        "username": "huj",
+        "email": "huj@yahoo.com",
+        "password": "12345678"
+      },
+      {
+        "id": "9bfe",
+        "username": "Nonzamo",
+        "email": "nonzamo@gmail.com",
+        "password": "12345678"
+      }
+    ]
+  }
