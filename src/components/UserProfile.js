@@ -8,10 +8,13 @@ function UserProfile() {
     };
   
     return (
-      <div>
-        <h2>User Profile</h2>
-        <p>Name: {user.name}</p>
-        <p>Email: {user.email}</p>
+      <div className="user-profile-container">
+        <div className="user-profile-card">
+          <img src="https://via.placeholder.com/150" alt="User Profile" />
+          <h2>User Profile</h2>
+          <p>Name: {user.name}</p>
+          <p>Email: {user.email}</p>
+        </div>
       </div>
     );
   }
