@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
-import mealLogo from '../assets/meal.png'; 
+import mealLogo from '../assets/meal.png';
 
 function Navbar() {
   return (
@@ -10,12 +10,12 @@ function Navbar() {
         <img src={mealLogo} alt="Meal Logo" className="navbar-logo" />
       </div>
       <ul>
-        <li><Link className="navbar-link" to="/">Home</Link></li>
-        <li><Link className="navbar-link" to="/categories">Categories</Link></li>
-        <li><Link className="navbar-link" to="/meal-plan">Meal Plan</Link></li>
-        <li><Link className="navbar-link" to="/profile">Profile</Link></li>
-        <li><Link className="navbar-link" to="/search">Search</Link></li>
-        <li><Link className="navbar-link" to="/feedback">Feedback</Link></li>
+        <li><NavLink className="navbar-link" to="/" end>Home</NavLink></li>
+        <li><NavLink className="navbar-link" to="/categories">Categories</NavLink></li>
+        <li><NavLink className="navbar-link" to="/meal-plan">Meal Plan</NavLink></li>
+        <li><NavLink className="navbar-link" to="/profile">Profile</NavLink></li>
+        <li><NavLink className="navbar-link" to="/search">Search</NavLink></li>
+        <li><NavLink className="navbar-link" to="/feedback">Feedback</NavLink></li>
       </ul>
     </nav>
   );
