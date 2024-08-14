@@ -1,33 +1,21 @@
-import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { AuthContext } from './AuthContext';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 import mealLogo from '../assets/meal.png'; 
 
 function Navbar() {
-  const { isLoggedIn } = useContext(AuthContext);
-  const navigate = useNavigate();
-
-  const handleNavigation = (path) => {
-    if (!isLoggedIn) {
-      navigate('/login');
-    } else {
-      navigate(path);
-    }
-  };
-
   return (
     <nav className="navbar">
       <div className="logo-container">
         <img src={mealLogo} alt="Meal Logo" className="navbar-logo" />
       </div>
       <ul>
-        <li onClick={() => handleNavigation('/')}>Home</li>
-        <li onClick={() => handleNavigation('/categories')}>Categories</li>
-        <li onClick={() => handleNavigation('/meal-plan')}>Meal Plan</li>
-        <li onClick={() => handleNavigation('/profile')}>Profile</li>
-        <li onClick={() => handleNavigation('/search')}>Search</li>
-        <li onClick={() => handleNavigation('/feedback')}>Feedback</li>
+        <li><Link className="navbar-link" to="/">Home</Link></li>
+        <li><Link className="navbar-link" to="/categories">Categories</Link></li>
+        <li><Link className="navbar-link" to="/meal-plan">Meal Plan</Link></li>
+        <li><Link className="navbar-link" to="/profile">Profile</Link></li>
+        <li><Link className="navbar-link" to="/search">Search</Link></li>
+        <li><Link className="navbar-link" to="/feedback">Feedback</Link></li>
       </ul>
     </nav>
   );
