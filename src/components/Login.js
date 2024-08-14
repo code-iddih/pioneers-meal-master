@@ -69,7 +69,14 @@ function Login() {
         (user) => user.username === username && user.password === password
       );
       if (userExists) {
-        login(); // Set login state and redirect
+        const user = users.find(
+          (user) => user.username === username && user.password === password
+        );
+        login({
+          name: user.username,
+          email: user.email,
+          profilePicture: user.profilePicture || 'https://via.placeholder.com/150',
+        });
       } else {
         setMessage('Invalid username or password.');
       }
