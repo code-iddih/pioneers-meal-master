@@ -27,6 +27,10 @@ body {
     animation: fadeInUp 0.5s forwards 0.5s;
 }
 
+.home-header:hover {
+    transform: scale(1.05);
+}
+
 .home-header h1 {
     color: #1c1c1c;
     font-size: 3rem;
@@ -72,6 +76,10 @@ body {
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 0.5s forwards 0.9s;
+}
+
+.restaurant-info:hover {
+    transform: scale(1.05);
 }
 
 .restaurant-info h2 {
