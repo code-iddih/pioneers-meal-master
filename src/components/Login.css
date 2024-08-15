@@ -1,5 +1,5 @@
 body {
-    background-color: #f3f3f3; /* Changed background to a lighter shade */
+    background-color: #282c34; 
     font-family: 'Roboto', sans-serif;
   }
   
@@ -15,7 +15,7 @@ body {
     display: flex;
     max-width: 1000px;
     width: 100%;
-    background-color: #fff;
+    background-color: #f7c4c4;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -27,7 +27,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    background-color: #fafafa; /* Optional background to highlight the image */
+    background-color: #f7c4c4; 
   }
   
   .login-image {
@@ -59,9 +59,9 @@ body {
   }
   
   h1 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #333;
+    font-size: px;
+    font-weight: bolder;
+    color: #000;
   }
   
   .form-container {
@@ -124,7 +124,7 @@ body {
   }
   
   .forgot-password a {
-    color: #5a67d8;
+    color: blue;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s ease;
@@ -153,12 +153,12 @@ body {
   }
   
   .btn-signup {
-    background-color: black;
+    background-color: #000;
     color: #fff;
   }
   
   .btn-signin {
-    background-color: black;
+    background-color: #000;
     color: #fff;
   }
   
@@ -183,9 +183,9 @@ body {
     font-weight: 600;
     cursor: pointer;
     color: #fff;
-    background-color: rgb(133, 33, 226); /* Use the same color as the Sign Up button */
+    background-color: #ff6600; 
     transition: all 0.3s ease;
-    margin-bottom: 10px; /* Spacing between submit button and the other buttons */
+    margin-bottom: 10px; 
   }
   
   .btn-submit:hover {
@@ -202,4 +202,5 @@ body {
     font-size: 14px;
     color: #333;
   }
+  
   
