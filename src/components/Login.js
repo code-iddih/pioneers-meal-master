@@ -4,7 +4,9 @@ import './Login.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import foodImage from '../assets/food.jpg';
 import meal from '../assets/meal.png';
+import LoginHeader from './LoginHeader';
 import Footer from "./Footer";
+
 
 function Login() {
   const [username, setUsername] = useState('');
