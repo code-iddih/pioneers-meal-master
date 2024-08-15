@@ -1,193 +1,141 @@
-import React, { useState, useContext, useEffect } from 'react';
-import { AuthContext } from './AuthContext';
+import React, { useState } from 'react';
 import './UserProfile.css';
-import { FaPen } from 'react-icons/fa';
 
 function UserProfile() {
-    const { isLoggedIn, logout } = useContext(AuthContext);
+    const [showModal, setShowModal] = useState(false);
     const [user, setUser] = useState({
-        id: '',
-        name: '',
-        email: '',
-        password: '',
-        profilePicture: 'https://via.placeholder.com/150',
+        name: "Melchior",
+        email: "melchior@example.com",
+        bio: "Food lover & Recipe creator. Sharing my favorite meals!",
+        followers: 1234,
+        following: 456,
+        posts: 78,
+        profilePicture: "https://cdn.pixabay.com/photo/2015/09/14/11/43/restaurant-939436_1280.jpg",
+        postImages: [
+            "https://media.istockphoto.com/id/1829241109/photo/enjoying-a-brunch-together.jpg?s=612x612&w=is&k=20&c=_WAbcCXxO927NToMhnQ3ERTdGXZVHPzHq7ENvzwFHj8=",
+            "https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_1280.jpg",
+            "https://cdn.pixabay.com/photo/2017/09/16/19/21/salad-2756467_1280.jpg"
+        ]
     });
-    const [isEditing, setIsEditing] = useState({
-        name: false,
-        email: false,
-        password: false,
-    });
+    const [newProfilePicture, setNewProfilePicture] = useState(null);
+    const [newPostImage, setNewPostImage] = useState(null);
 
-    useEffect(() => {
-        const fetchUserData = async () => {
-            try {
-                const response = await fetch('http://localhost:3001/users'); 
-                const users = await response.json();
-                const currentUser = users.find(user => user.username === 'kil'); 
+    const handleEditProfile = () => {
+        setShowModal(true);
+    };
 
-                if (currentUser) {
-                    setUser({
-                        ...currentUser,
-                        profilePicture: currentUser.profileImage || 'https://via.placeholder.com/150'
-                    });
-                }
-            } catch (error) {
-                console.error('Failed to fetch user data:', error);
-            }
-        };
-
-        if (isLoggedIn) {
-            fetchUserData();
-        }
-    }, [isLoggedIn]);
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setUser(prevUser => ({
-            ...prevUser,
-            [name]: value,
+        setUser(prevState => ({
+            ...prevState,
+            [name]: value
         }));
     };
 
     const handleProfilePictureChange = (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            const formData = new FormData();
-            formData.append('profileImage', file);
-
-            fetch(`http://localhost:3001/users/${user.id}/uploadProfileImage`, {
-                method: 'POST',
-                body: formData,
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    setUser(prevUser => ({
-                        ...prevUser,
-                        profilePicture: data.profileImageUrl
-                    }));
-                    alert('Profile picture updated successfully!');
-                } else {
-                    alert('Failed to upload profile picture.');
-                }
-            })
-            .catch(error => {
-                console.error('Error uploading profile picture:', error);
-                alert('Error uploading profile picture.');
-            });
-        }
+        setNewProfilePicture(URL.createObjectURL(e.target.files[0]));
     };
 
-    const handleSaveChanges = async () => {
-        try {
-            const response = await fetch(`http://localhost:3001/users/${user.id}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    username: user.name,
-                    email: user.email,
-                    password: user.password,
-                    profileImage: user.profilePicture,
-                }),
-            });
+    const handlePostImageChange = (e) => {
+        setNewPostImage(URL.createObjectURL(e.target.files[0]));
+    };
 
-            if (response.ok) {
-                alert('Profile updated successfully!');
-                setIsEditing({
-                    name: false,
-                    email: false,
-                    password: false,
-                });
-            } else {
-                const errorText = await response.text();
-                console.error('Failed to update profile:', errorText);
-                alert('Failed to update profile.');
-            }
-        } catch (error) {
-            console.error('Error updating profile:', error);
-            alert('Error updating profile.');
+    const handleSaveChanges = () => {
+        if (newProfilePicture) {
+            setUser(prevState => ({
+                ...prevState,
+                profilePicture: newProfilePicture
+            }));
         }
+
+        if (newPostImage) {
+            setUser(prevState => ({
+                ...prevState,
+                postImages: [...prevState.postImages, newPostImage]
+            }));
+        }
+
+        
+        alert('Profile updated!');
+        setShowModal(false);
     };
 
     return (
         <div className="user-profile-container">
-            <div className="user-profile-card">
-                <img src={user.profilePicture} alt="User Profile" className="profile-picture" />
-                <div className="profile-field">
-                    <label>Profile Picture:</label>
-                    <input type="file" accept="image/*" onChange={handleProfilePictureChange} />
-                </div>
-                <h2>User Profile</h2>
-
-                <div className="profile-field">
-                    <label>Name:</label>
-                    <div className="editable-field">
-                        {isEditing.name ? (
-                            <input
-                                type="text"
-                                name="name"
-                                value={user.name}
-                                onChange={handleInputChange}
-                            />
-                        ) : (
-                            <span>{user.name}</span>
-                        )}
-                        <FaPen
-                            className="edit-icon"
-                            onClick={() => setIsEditing(prev => ({ ...prev, name: !prev.name }))}
-                        />
+            <div className="user-profile-header">
+                <img src={user.profilePicture} alt="User Profile" className="user-profile-picture" />
+                <div className="user-profile-details">
+                    <h2>{user.name}</h2>
+                    <p className="user-profile-bio">{user.bio}</p>
+                    <div className="user-profile-stats">
+                        <div><strong>{user.posts}</strong> Posts</div>
+                        <div><strong>{user.followers}</strong> Followers</div>
+                        <div><strong>{user.following}</strong> Following</div>
                     </div>
                 </div>
-
-                <div className="profile-field">
-                    <label>Email:</label>
-                    <div className="editable-field">
-                        {isEditing.email ? (
-                            <input
-                                type="email"
-                                name="email"
-                                value={user.email}
-                                onChange={handleInputChange}
-                            />
-                        ) : (
-                            <span>{user.email}</span>
-                        )}
-                        <FaPen
-                            className="edit-icon"
-                            onClick={() => setIsEditing(prev => ({ ...prev, email: !prev.email }))}
-                        />
-                    </div>
-                </div>
-
-                <div className="profile-field">
-                    <label>Password:</label>
-                    <div className="editable-field">
-                        {isEditing.password ? (
-                            <input
-                                type="password"
-                                name="password"
-                                value={user.password}
-                                onChange={handleInputChange}
-                            />
-                        ) : (
-                            <span>********</span>
-                        )}
-                        <FaPen
-                            className="edit-icon"
-                            onClick={() => setIsEditing(prev => ({ ...prev, password: !prev.password }))}
-                        />
-                    </div>
-                </div>
-
-                <button onClick={handleSaveChanges} className="save-button">
-                    Save Changes
-                </button>
-                <button onClick={logout} className="logout-button">
-                    Sign Out
+                <button className="edit-profile-button" onClick={handleEditProfile}>
+                    Edit Profile
                 </button>
             </div>
+            <div className="user-profile-info">
+                <p>Email: {user.email}</p>
+            </div>
+            <div className="user-posts">
+                <h3>Food Posts</h3>
+                <div className="post-images">
+                    {user.postImages.map((image, index) => (
+                        <img key={index} src={image} alt={`Post ${index + 1}`} className="post-image" />
+                    ))}
+                </div>
+            </div>
+
+            {showModal && (
+                <div className="modal-overlay">
+                    <div className="modal-content">
+                        <h2>Edit Profile</h2>
+                        <label>Name:</label>
+                        <input
+                            type="text"
+                            name="name"
+                            value={user.name}
+                            onChange={handleInputChange}
+                        />
+                        <label>Email:</label>
+                        <input
+                            type="email"
+                            name="email"
+                            value={user.email}
+                            onChange={handleInputChange}
+                        />
+                        <label>Bio:</label>
+                        <textarea
+                            name="bio"
+                            value={user.bio}
+                            onChange={handleInputChange}
+                        />
+                        <label>Profile Picture:</label>
+                        <input
+                            type="file"
+                            accept="image/*"
+                            onChange={handleProfilePictureChange}
+                        />
+                        <label>Add a New Post Image:</label>
+                        <input
+                            type="file"
+                            accept="image/*"
+                            onChange={handlePostImageChange}
+                        />
+                        <div className="modal-actions">
+                            <button className="save-button" onClick={handleSaveChanges}>Save</button>
+                            <button className="cancel-button" onClick={handleCloseModal}>Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
