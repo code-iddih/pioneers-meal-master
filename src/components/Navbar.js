@@ -12,9 +12,9 @@ function Navbar() {
       <ul>
         <li><NavLink className="navbar-link" to="/" end>Home</NavLink></li>
         <li><NavLink className="navbar-link" to="/categories">Categories</NavLink></li>
+        <li><NavLink className="navbar-link" to="/recipes">Recipes</NavLink></li>
         <li><NavLink className="navbar-link" to="/meal-plan">Meal Plan</NavLink></li>
         <li><NavLink className="navbar-link" to="/profile">Profile</NavLink></li>
-        <li><NavLink className="navbar-link" to="/search">Search</NavLink></li>
         <li><NavLink className="navbar-link" to="/feedback">Feedback</NavLink></li>
       </ul>
     </nav>
