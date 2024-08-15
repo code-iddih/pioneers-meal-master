@@ -13,11 +13,11 @@ const Home = () => {
   return (
     <div className="home-container">
       <header className="home-header">
-        <h1>Welcome to Meal Master</h1>
+        <h1>Meal Master</h1>
         <p>Where taste meets the myth!</p>
         {user && (
           <div className="user-info">
-            <h2>Welcome, {user.name}!</h2>
+            <h2>Welcome, <span className="user-name">{user.name}!</span></h2>
             <img
               src="https://cdn.pixabay.com/photo/2024/03/02/15/58/ai-generated-8608868_640.png"
               alt="Profile"

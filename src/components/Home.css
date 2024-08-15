@@ -37,6 +37,11 @@ body {
     margin-top: 20px;
 }
 
+.user-name {
+    color: white;
+    font-weight: bolder;
+}
+
 .profile-icon {
     width: 100px;
     height: 100px;
@@ -113,7 +118,7 @@ body {
 
 .category-item p {
     padding: 0 15px 15px 15px;
-    color: #dcdcdc;
+    color: blue; 
 }
 
 .meals h2 {

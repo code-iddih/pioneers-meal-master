@@ -42,7 +42,7 @@ function Login() {
         body: JSON.stringify({ username, email, password }),
       });
       if (response.ok) {
-        setMessage('Registration successful!');
+        setMessage('Registration successful! You can now SignIn...');
         setUsername('');
         setEmail('');
         setPassword('');
