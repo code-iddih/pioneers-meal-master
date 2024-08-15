@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
 }
 
 .user-profile-card {
@@ -26,6 +25,7 @@
 .profile-field {
     margin-bottom: 15px;
     text-align: left;
+    color: black;
 }
 
 .profile-field label {
@@ -42,7 +42,7 @@
 .editable-field input {
     flex: 1;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #000;
     border-radius: 5px;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .edit-icon:hover {
-    color: orange;
+    color: #ff6600;
 }
 
 .save-button,
@@ -68,7 +68,7 @@
     margin-top: 10px;
     border: none;
     border-radius: 5px;
-    background-color: orange;
+    background-color: #ff6600;
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -76,5 +76,9 @@
 
 .save-button:hover,
 .logout-button:hover {
-    background-color: darkorange;
+    background-color: #000;
+}
+
+label {
+    color: black;
 }
