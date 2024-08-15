@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
-import { AuthContext } from './AuthContext';
-import './Home.css';
-
+import React, { useContext } from "react";
+import { AuthContext } from "./AuthContext";
+import Footer from "./Footer";
+import "./Home.css";
 
 const categories = [];
 
@@ -18,7 +18,11 @@ const Home = () => {
         {user && (
           <div className="user-info">
             <h2>Welcome, {user.name}!</h2>
-            <img src={user.profilePicture} alt="Profile" className="profile-icon" />
+            <img
+              src="https://cdn.pixabay.com/photo/2024/03/02/15/58/ai-generated-8608868_640.png"
+              alt="Profile"
+              className="profile-icon"
+            />
           </div>
         )}
       </header>
@@ -26,20 +30,27 @@ const Home = () => {
       <section className="restaurant-info">
         <h2>About Us</h2>
         <p>
-          Meal Master was established in 2023, with a passion for delivering exceptional culinary experiences. Over the years, we have grown to become a beloved destination for food enthusiasts. With a team of over 50 dedicated staff members, we strive to provide the best service and mouth-watering dishes to our patrons.
+          Meal Master was established in 2023, with a passion for delivering
+          exceptional culinary experiences. Over the years, we have grown to
+          become a beloved destination for food enthusiasts. With a team of over
+          50 dedicated staff members, we strive to provide the best service and
+          mouth-watering dishes to our patrons.
         </p>
         <h3>Contact Information</h3>
         <p>
-          <strong>Address:</strong> Eastern Bypass, Kamakis Town<br />
-          <strong>Phone:</strong> (254)727 207 156<br />
-          <strong>Email:</strong> mastermeal@gmail.com<br />
+          <strong>Address:</strong> Eastern Bypass, Kamakis Town
+          <br />
+          <strong>Phone:</strong> (254)727 207 156
+          <br />
+          <strong>Email:</strong> mastermeal@gmail.com
+          <br />
           <strong>Website:</strong> www.mealmaster.com
         </p>
       </section>
 
       <section className="categories">
         <div className="category-list">
-          {categories.map(category => (
+          {categories.map((category) => (
             <div key={category.idCategory} className="category-item">
               <img src={category.strCategoryThumb} alt={category.strCategory} />
               <h3>{category.strCategory}</h3>
@@ -50,9 +61,8 @@ const Home = () => {
       </section>
 
       <section className="meals">
-        <h2>Our Special Meals</h2>
         <div className="meal-list">
-          {meals.map(meal => (
+          {meals.map((meal) => (
             <div key={meal.idMeal} className="meal-item">
               <img src={meal.strMealThumb} alt={meal.strMeal} />
               <h3>{meal.strMeal}</h3>
@@ -74,6 +84,8 @@ const Home = () => {
           ))}
         </div>
       </section>
+
+      <Footer /> 
     </div>
   );
 };
