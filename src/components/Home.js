@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <header className="home-header">
-        <h1>Meal Master</h1>
+        <h1>Introducing Meal Master</h1>
         <p>Where taste meets the myth!</p>
         {user && (
           <div className="user-info">
