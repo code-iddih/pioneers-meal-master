@@ -23,8 +23,8 @@ const App = () => {
             path="*"
             element={
               <ProtectedRoute>
-                <Header />
                 <Navbar />
+                <Header />
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/categories" element={<CategoryList />} />

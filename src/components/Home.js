@@ -6,7 +6,7 @@ function Home() {
 
     return (
         <div>
-            <h1>Welcome {user?.name}!</h1>
+            <h2>Welcome {user?.name}!</h2>
             <img src={user?.profilePicture} alt="Profile" className="profile-icon" />
             <p>Explore various meal categories and recipes.</p>
         </div>

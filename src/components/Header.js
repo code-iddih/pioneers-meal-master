@@ -1,12 +1,12 @@
 import React from 'react';
 
 function Header() {
-    return (
-      <header>
-        <h1>Meal Master</h1>
-      </header>
-    );
-  }
-  
-  export default Header;
-  
+  return (
+    <header>
+      <div className="header-image">
+      </div>
+    </header>
+  );
+}
+
+export default Header;

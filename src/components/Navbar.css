@@ -1,81 +1,44 @@
-/* Navbar container styling */
+/* Navbar Styles */
 .navbar {
-  background-color: black;
-  padding: 10px 20px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
   display: flex;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+  background-color: #333; /* Dark background color for the navbar */
+  padding: 1rem;
+  position: fixed; /* Keeps the navbar at the top of the screen */
+  top: 0;
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it’s above other content */
 }
 
-/* Logo container styling */
 .logo-container {
-  margin-right: 30px;
-}
-
-/* Navbar logo styling */
-.navbar-logo {
-  height: 40px;
-  display: block;
-}
-
-/* Navbar list styling */
-.navbar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
-  flex: 1;
-  justify-content: center;
+  align-items: center;
 }
 
-/* Navbar list item styling */
-.navbar li {
-  margin: 0 20px;
+.navbar-logo {
+  height: 40px; /* Adjust the height of the logo as needed */
 }
 
-/* Navbar link styling */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin: 0 1rem;
+}
+
 .navbar-link {
+  color: white;
   text-decoration: none;
-  color: #fff;
-  font-size: 16px;
-  position: relative;
-  padding: 5px 0;
-  transition: color 0.3s, background-color 0.3s;
+  font-size: 1rem; /* Adjust font size as needed */
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
-/* Hover effect for links */
-.navbar-link:hover {
-  color: orange;
-}
-
-/* Hover effect underline */
-.navbar-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 3px;
-  background-color: orange;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.3s ease;
-}
-
-/* Show the underline on hover */
-.navbar-link:hover::after {
-  transform: scaleX(1);
-}
-
-/* Active link styling */
 .navbar-link.active {
-  background-color: orange;
-  color: #fff;
-  border-radius: 4px;
-  padding: 5px 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  text-decoration: underline; /* Style for the active link */
+  color: #f0f0f0; /* Change color on hover */
 }
