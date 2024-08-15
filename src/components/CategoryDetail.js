@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import './CategoryDetail.css';
 
 function CategoryDetail() {
   const { idCategory } = useParams();
-  const [meals, setMeals] = useState([]);
+  const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/meals')
+    axios.get('http://localhost:3002/recipes') 
       .then(response => {
-        const filteredMeals = response.data.filter(meal => meal.idCategory === idCategory);
-        setMeals(filteredMeals);
+        const filteredRecipes = response.data.filter(recipe => recipe.category === parseInt(idCategory));
+        setRecipes(filteredRecipes);
         setLoading(false);
       })
       .catch(error => {
-        console.error('Error fetching meals:', error);
+        console.error('Error fetching recipes:', error);
         setLoading(false);
       });
   }, [idCategory]);
@@ -23,13 +24,13 @@ function CategoryDetail() {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div>
+    <div className="category-detail">
       <h1>Recipes</h1>
       <ul>
-        {meals.map(meal => (
-          <li key={meal.idMeal}>
-            <h2>{meal.strMeal}</h2>
-            <img src={meal.strMealThumb} alt={meal.strMeal} />
+        {recipes.map(recipe => (
+          <li key={recipe.id}>
+            <img src={recipe.image} alt={recipe.name} />
+            <h2>{recipe.name}</h2>
           </li>
         ))}
       </ul>
