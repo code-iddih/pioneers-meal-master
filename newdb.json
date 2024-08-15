@@ -1,0 +1,477 @@
+{
+    "categories": [
+      {"id": 1, "name": "Appetizers", "image": "https://images.unsplash.com/photo-1719937206109-7f4e933230c8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMXx8fGVufDB8fHx8fA%3D%3D"},
+      {"id": 2, "name": "Main Courses", "image": "https://images.unsplash.com/photo-1564373792-92de24d7c26a"},
+      {"id": 3, "name": "Desserts", "image": "https://images.unsplash.com/photo-1591757812230-bfe74b8b8f51"},
+      {"id": 4, "name": "Salads", "image": "https://images.unsplash.com/photo-1543353076-0ed27920e5c0"},
+      {"id": 5, "name": "Soups", "image": "https://images.unsplash.com/photo-1574158622683-08e9c2d25872"},
+      {"id": 6, "name": "Side Dishes", "image": "https://images.unsplash.com/photo-1556741533-1a1c9a2a4c54"},
+      {"id": 7, "name": "Beverages", "image": "https://images.unsplash.com/photo-1506748686214e9df14f69d0d"},
+      {"id": 8, "name": "Snacks", "image": "https://images.unsplash.com/photo-1603767435652-e3406d3b0218"},
+      {"id": 9, "name": "Breakfast", "image": "https://images.unsplash.com/photo-1504674900247-0877dfd7c2e9"},
+      {"id": 10, "name": "Lunch", "image": "https://images.unsplash.com/photo-1594461080563-bb0534c73b4b"},
+      {"id": 11, "name": "Dinner", "image": "https://images.unsplash.com/photo-1556740749-1d75c9b4e1e6"},
+      {"id": 12, "name": "Vegan", "image": "https://images.unsplash.com/photo-1602758800640-3c98b37da96a"},
+      {"id": 13, "name": "Vegetarian", "image": "https://images.unsplash.com/photo-1585371801191-fd6f393a600c"},
+      {"id": 14, "name": "Gluten-Free", "image": "https://images.unsplash.com/photo-1556740744-4e0b6f6b7bd4"},
+      {"id": 15, "name": "Paleo", "image": "https://images.unsplash.com/photo-1571782512608-09fd3b7d31b2"},
+      {"id": 16, "name": "Keto", "image": "https://images.unsplash.com/photo-1588810733396-0a6f7cf73751"},
+      {"id": 17, "name": "Low-Carb", "image": "https://images.unsplash.com/photo-1542306856-e36e0546f03a"},
+      {"id": 18, "name": "Low-Fat", "image": "https://images.unsplash.com/photo-1608915121085-6f7b8cba46b7"},
+      {"id": 19, "name": "High-Protein", "image": "https://images.unsplash.com/photo-1556742100-e1d6df9c56c8"},
+      {"id": 20, "name": "Comfort Food", "image": "https://images.unsplash.com/photo-1556742044-bd23f3e8e8a0"}
+    ],
+    "recipes": [
+      {
+        "id": 1,
+        "name": "Spaghetti Carbonara",
+        "description": "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
+        "ingredients": ["Spaghetti", "Eggs", "Cheese", "Pancetta", "Pepper"],
+        "instructions": ["Cook spaghetti according to package instructions.", "Fry pancetta until crispy.", "Mix eggs and cheese.", "Combine all ingredients and season with pepper."],
+        "image": "https://images.unsplash.com/photo-1564572367-78a30c5c63a4",
+        "category": 2
+      },
+      {
+        "id": 2,
+        "name": "Chicken Caesar Salad",
+        "description": "A fresh salad with grilled chicken, romaine lettuce, croutons, and Caesar dressing.",
+        "ingredients": ["Chicken", "Romaine lettuce", "Croutons", "Caesar dressing"],
+        "instructions": ["Grill chicken and slice.", "Toss lettuce with dressing.", "Top with chicken and croutons."],
+        "image": "https://images.unsplash.com/photo-1556745728-71b2e6b07cf7",
+        "category": 4
+      },
+      {
+        "id": 3,
+        "name": "Chocolate Chip Cookies",
+        "description": "Classic cookies loaded with chocolate chips.",
+        "ingredients": ["Flour", "Sugar", "Butter", "Chocolate chips"],
+        "instructions": ["Mix ingredients and bake at 350°F for 10-12 minutes."],
+        "image": "https://images.unsplash.com/photo-1549366022-16409d03d08b",
+        "category": 3
+      },
+      {
+        "id": 4,
+        "name": "Beef Tacos",
+        "description": "Tacos filled with seasoned ground beef, topped with lettuce, cheese, and salsa.",
+        "ingredients": ["Ground beef", "Taco shells", "Lettuce", "Cheese", "Salsa"],
+        "instructions": ["Cook beef with seasoning.", "Fill taco shells with beef and toppings."],
+        "image": "https://images.unsplash.com/photo-1604104163936-12b3f3c98263",
+        "category": 2
+      },
+      {
+        "id": 5,
+        "name": "Vegetable Stir-Fry",
+        "description": "A quick and healthy stir-fry with a variety of fresh vegetables.",
+        "ingredients": ["Mixed vegetables", "Soy sauce", "Garlic", "Ginger"],
+        "instructions": ["Stir-fry vegetables with garlic and ginger, add soy sauce."],
+        "image": "https://images.unsplash.com/photo-1563388852-9cc8fd6a929b",
+        "category": 12
+      },
+      {
+        "id": 6,
+        "name": "Greek Yogurt Smoothie",
+        "description": "A refreshing smoothie made with Greek yogurt and fresh fruit.",
+        "ingredients": ["Greek yogurt", "Fruit", "Honey"],
+        "instructions": ["Blend ingredients until smooth."],
+        "image": "https://images.unsplash.com/photo-1586365084063-15c788dcd0c5",
+        "category": 7
+      },
+      {
+        "id": 7,
+        "name": "Margherita Pizza",
+        "description": "A simple pizza topped with fresh tomatoes, mozzarella, and basil.",
+        "ingredients": ["Pizza dough", "Tomatoes", "Mozzarella", "Basil"],
+        "instructions": ["Top dough with ingredients and bake at 475°F for 10-12 minutes."],
+        "image": "https://images.unsplash.com/photo-1575680771617-30d8729cbba2",
+        "category": 2
+      },
+      {
+        "id": 8,
+        "name": "Apple Pie",
+        "description": "A traditional dessert with a flaky crust and spiced apple filling.",
+        "ingredients": ["Apples", "Pie crust", "Sugar", "Cinnamon"],
+        "instructions": ["Prepare crust, fill with apple mixture, and bake at 375°F for 50-60 minutes."],
+        "image": "https://images.unsplash.com/photo-1560913527-78da1e13c6dd",
+        "category": 3
+      },
+      {
+        "id": 9,
+        "name": "Quinoa Salad",
+        "description": "A nutritious salad with quinoa, cucumbers, tomatoes, and a lemon vinaigrette.",
+        "ingredients": ["Quinoa", "Cucumbers", "Tomatoes", "Lemon", "Olive oil"],
+        "instructions": ["Cook quinoa and mix with chopped vegetables and dressing."],
+        "image": "https://images.unsplash.com/photo-1576623417547-33a5a1e894d0",
+        "category": 4
+      },
+      {
+        "id": 10,
+        "name": "Beef Stroganoff",
+        "description": "Tender beef in a creamy mushroom sauce, served over egg noodles.",
+        "ingredients": ["Beef", "Mushrooms", "Cream", "Egg noodles"],
+        "instructions": ["Cook beef and mushrooms, add cream, and serve over noodles."],
+        "image": "https://images.unsplash.com/photo-1562957260-3cfb67026a87",
+        "category": 2
+      },
+      {
+        "id": 11,
+        "name": "Chicken Alfredo",
+        "description": "Creamy pasta dish with grilled chicken and Alfredo sauce.",
+        "ingredients": ["Chicken", "Pasta", "Alfredo sauce"],
+        "instructions": ["Cook pasta, top with chicken and sauce."],
+        "image": "https://images.unsplash.com/photo-1595815130131-1f055d29b02e",
+        "category": 2
+      },
+      {
+        "id": 12,
+        "name": "Caesar Wrap",
+        "description": "A wrap filled with Caesar salad ingredients and grilled chicken.",
+        "ingredients": ["Tortilla", "Chicken", "Romaine lettuce", "Caesar dressing"],
+        "instructions": ["Fill tortilla with salad ingredients and wrap."],
+        "image": "https://images.unsplash.com/photo-1597269344828-96e51b24d3eb",
+        "category": 4
+      },
+      {
+        "id": 13,
+        "name": "Mango Salsa",
+        "description": "A fresh salsa made with mango, red onion, and cilantro.",
+        "ingredients": ["Mango", "Red onion", "Cilantro", "Lime"],
+        "instructions": ["Mix diced mango with chopped onion and cilantro, and squeeze lime juice over it."],
+        "image": "https://images.unsplash.com/photo-1506778318353-f95b6b8f4b87",
+        "category": 7
+      },
+      {
+        "id": 14,
+        "name": "Tom Yum Soup",
+        "description": "A spicy Thai soup with shrimp, mushrooms, and lemongrass.",
+        "ingredients": ["Shrimp", "Mushrooms", "Lemongrass", "Chili paste"],
+        "instructions": ["Simmer shrimp, mushrooms, and lemongrass with chili paste."],
+        "image": "https://images.unsplash.com/photo-1566749732-306e3f5171d0",
+        "category": 5
+      },
+      {
+        "id": 15,
+        "name": "Falafel",
+        "description": "Deep-fried balls made from chickpeas and spices.",
+        "ingredients": ["Chickpeas", "Garlic", "Cumin", "Coriander"],
+        "instructions": ["Blend ingredients, form into balls, and fry until golden brown."],
+        "image": "https://images.unsplash.com/photo-1582213076324-0e76863a5a36",
+        "category": 12
+      },
+      {
+        "id": 16,
+        "name": "Shrimp Scampi",
+        "description": "Shrimp cooked in a garlic butter sauce, served over pasta.",
+        "ingredients": ["Shrimp", "Butter", "Garlic", "Pasta"],
+        "instructions": ["Cook shrimp in butter and garlic, serve over pasta."],
+        "image": "https://images.unsplash.com/photo-1610707314342-6f8e9b38b8f2",
+        "category": 2
+      },
+      {
+        "id": 17,
+        "name": "Banana Bread",
+        "description": "A moist and sweet bread made with ripe bananas.",
+        "ingredients": ["Bananas", "Flour", "Sugar", "Eggs"],
+        "instructions": ["Mix ingredients and bake at 350°F for 60 minutes."],
+        "image": "https://images.unsplash.com/photo-1542306142-96c7a0f1c6b2",
+        "category": 3
+      },
+      {
+        "id": 18,
+        "name": "Roasted Chicken",
+        "description": "A whole chicken seasoned and roasted until crispy.",
+        "ingredients": ["Chicken", "Herbs", "Garlic", "Lemon"],
+        "instructions": ["Season chicken, roast at 375°F for 1-1.5 hours."],
+        "image": "https://images.unsplash.com/photo-1564502418-c29d54851c58",
+        "category": 2
+      },
+      {
+        "id": 19,
+        "name": "Chia Seed Pudding",
+        "description": "A creamy and nutritious pudding made from chia seeds and milk.",
+        "ingredients": ["Chia seeds", "Milk", "Honey", "Vanilla"],
+        "instructions": ["Mix ingredients and refrigerate overnight."],
+        "image": "https://images.unsplash.com/photo-1556742828-0e4f5b68d94a",
+        "category": 12
+      },
+      {
+        "id": 20,
+        "name": "Stuffed Bell Peppers",
+        "description": "Bell peppers stuffed with a savory mixture of rice, meat, and vegetables.",
+        "ingredients": ["Bell peppers", "Ground meat", "Rice", "Tomato sauce"],
+        "instructions": ["Stuff peppers with mixture, bake at 375°F for 30 minutes."],
+        "image": "https://images.unsplash.com/photo-1560913518-2f05a6fbc9d7",
+        "category": 2
+      },
+      {
+        "id": 21,
+        "name": "Lemon Bars",
+        "description": "Tangy lemon bars with a buttery crust.",
+        "ingredients": ["Lemons", "Butter", "Sugar", "Flour"],
+        "instructions": ["Prepare crust, bake, then top with lemon filling and bake again."],
+        "image": "https://images.unsplash.com/photo-1548350748-60eae9a4b4e6",
+        "category": 3
+      },
+      {
+        "id": 22,
+        "name": "Buffalo Wings",
+        "description": "Spicy chicken wings served with a tangy sauce.",
+        "ingredients": ["Chicken wings", "Hot sauce", "Butter"],
+        "instructions": ["Fry wings, toss with sauce, and serve with celery sticks."],
+        "image": "https://images.unsplash.com/photo-1567038134-c593bbad8a76",
+        "category": 1
+      },
+      {
+        "id": 23,
+        "name": "Beef Chili",
+        "description": "A hearty and spicy chili made with ground beef and beans.",
+        "ingredients": ["Ground beef", "Beans", "Tomatoes", "Chili powder"],
+        "instructions": ["Cook beef, add beans and tomatoes, and season with chili powder."],
+        "image": "https://images.unsplash.com/photo-1601705373820-f9f9c348fb9b",
+        "category": 1
+      },
+      {
+        "id": 24,
+        "name": "Chicken Quesadillas",
+        "description": "Tortillas filled with chicken and cheese, grilled to perfection.",
+        "ingredients": ["Chicken", "Tortillas", "Cheese", "Salsa"],
+        "instructions": ["Fill tortillas with chicken and cheese, grill until crispy."],
+        "image": "https://images.unsplash.com/photo-1549692575-2d1a9ecedc4d",
+        "category": 1
+      },
+      {
+        "id": 25,
+        "name": "Pancakes",
+        "description": "Fluffy pancakes served with syrup and butter.",
+        "ingredients": ["Flour", "Eggs", "Milk", "Butter"],
+        "instructions": ["Mix ingredients, cook on griddle, and serve with syrup."],
+        "image": "https://images.unsplash.com/photo-1555685811-105438b8c8a2",
+        "category": 9
+      },
+      {
+        "id": 26,
+        "name": "Tomato Basil Soup",
+        "description": "A comforting soup made with ripe tomatoes and fresh basil.",
+        "ingredients": ["Tomatoes", "Basil", "Onion", "Cream"],
+        "instructions": ["Simmer tomatoes and onion, blend with basil and cream."],
+        "image": "https://images.unsplash.com/photo-1571134280683-d1b1f76f3a3f",
+        "category": 5
+      },
+      {
+        "id": 27,
+        "name": "Crispy Tofu",
+        "description": "Tofu pieces coated in a crispy breading and baked.",
+        "ingredients": ["Tofu", "Breadcrumbs", "Soy sauce", "Olive oil"],
+        "instructions": ["Coat tofu in breadcrumbs, bake until crispy."],
+        "image": "https://images.unsplash.com/photo-1586881344092-e207c07ff00b",
+        "category": 12
+      },
+      {
+        "id": 28,
+        "name": "Pasta Primavera",
+        "description": "Pasta tossed with fresh vegetables and a light sauce.",
+        "ingredients": ["Pasta", "Vegetables", "Olive oil", "Parmesan"],
+        "instructions": ["Cook pasta, toss with sautéed vegetables and sauce."],
+        "image": "https://images.unsplash.com/photo-1548740934-636d1a5a4f40",
+        "category": 2
+      },
+      {
+        "id": 29,
+        "name": "Smoothie Bowl",
+        "description": "A thick smoothie served in a bowl and topped with fruit and granola.",
+        "ingredients": ["Fruit", "Yogurt", "Granola", "Honey"],
+        "instructions": ["Blend fruit and yogurt, pour into a bowl, and top with granola."],
+        "image": "https://images.unsplash.com/photo-1585858040574-2e4fbdc4d12e",
+        "category": 7
+      },
+      {
+        "id": 30,
+        "name": "Chicken Pot Pie",
+        "description": "A savory pie filled with chicken and vegetables in a creamy sauce.",
+        "ingredients": ["Chicken", "Pie crust", "Vegetables", "Cream"],
+        "instructions": ["Prepare filling, cover with crust, and bake until golden brown."],
+        "image": "https://images.unsplash.com/photo-1609196613285-7d54d2ac0d2b",
+        "category": 2
+      },
+      {
+        "id": 31,
+        "name": "Beet Salad",
+        "description": "A refreshing salad made with roasted beets, goat cheese, and walnuts.",
+        "ingredients": ["Beets", "Goat cheese", "Walnuts", "Vinaigrette"],
+        "instructions": ["Combine roasted beets with cheese, walnuts, and dressing."],
+        "image": "https://images.unsplash.com/photo-1607417422224-8a8ed5931d52",
+        "category": 4
+      },
+      {
+        "id": 32,
+        "name": "Ratatouille",
+        "description": "A French vegetable stew made with zucchini, eggplant, and tomatoes.",
+        "ingredients": ["Zucchini", "Eggplant", "Tomatoes", "Herbs"],
+        "instructions": ["Sauté vegetables with herbs until tender."],
+        "image": "https://images.unsplash.com/photo-1568386766-8b13c682f823",
+        "category": 2
+      },
+      {
+        "id": 33,
+        "name": "Chia Seed Pudding",
+        "description": "A creamy dessert made with chia seeds, coconut milk, and fruit.",
+        "ingredients": ["Chia seeds", "Coconut milk", "Honey", "Fruit"],
+        "instructions": ["Mix chia seeds with coconut milk and refrigerate overnight. Top with fruit before serving."],
+        "image": "https://images.unsplash.com/photo-1556742044-4e0b6f6b7bd4",
+        "category": 12
+      },
+      {
+        "id": 34,
+        "name": "Stuffed Mushrooms",
+        "description": "Mushrooms stuffed with a savory mixture of breadcrumbs, cheese, and herbs.",
+        "ingredients": ["Mushrooms", "Breadcrumbs", "Cheese", "Herbs"],
+        "instructions": ["Stuff mushrooms with mixture and bake until golden brown."],
+        "image": "https://images.unsplash.com/photo-1587347980485-07d2570f92ff",
+        "category": 1
+      },
+      {
+        "id": 35,
+        "name": "Spinach Artichoke Dip",
+        "description": "A creamy dip made with spinach, artichokes, and cheese, perfect for parties.",
+        "ingredients": ["Spinach", "Artichokes", "Cream cheese", "Parmesan"],
+        "instructions": ["Mix ingredients, bake until bubbly, and serve with chips or bread."],
+        "image": "https://images.unsplash.com/photo-1598473919653-9fd12b847730",
+        "category": 1
+      },
+      {
+        "id": 36,
+        "name": "Sweet Potato Fries",
+        "description": "Crispy fries made from sweet potatoes, seasoned and baked.",
+        "ingredients": ["Sweet potatoes", "Olive oil", "Salt", "Paprika"],
+        "instructions": ["Cut potatoes into fries, season, and bake until crispy."],
+        "image": "https://images.unsplash.com/photo-1555559347-e44e0dc1d24e",
+        "category": 6
+      },
+      {
+        "id": 37,
+        "name": "Avocado Toast",
+        "description": "Simple and delicious toast topped with mashed avocado and seasoning.",
+        "ingredients": ["Bread", "Avocado", "Lemon", "Salt"],
+        "instructions": ["Toast bread, spread avocado, and season with lemon and salt."],
+        "image": "https://images.unsplash.com/photo-1594750035501-e083d5a8a077",
+        "category": 9
+      },
+      {
+        "id": 38,
+        "name": "Cinnamon Rolls",
+        "description": "Sweet rolls with a cinnamon-sugar filling and cream cheese icing.",
+        "ingredients": ["Flour", "Sugar", "Cinnamon", "Butter", "Cream cheese"],
+        "instructions": ["Prepare dough, roll with cinnamon filling, bake, and ice."],
+        "image": "https://images.unsplash.com/photo-1594973428128-6b1b9cf06968",
+        "category": 3
+      },
+      {
+        "id": 39,
+        "name": "Pumpkin Soup",
+        "description": "A creamy soup made with pumpkin and warm spices.",
+        "ingredients": ["Pumpkin", "Onion", "Garlic", "Cream"],
+        "instructions": ["Sauté onion and garlic, add pumpkin, blend with cream."],
+        "image": "https://images.unsplash.com/photo-1562910388-8beed93d8ecb",
+        "category": 5
+      },
+      {
+        "id": 40,
+        "name": "Berry Smoothie",
+        "description": "A refreshing smoothie made with mixed berries and yogurt.",
+        "ingredients": ["Mixed berries", "Yogurt", "Honey"],
+        "instructions": ["Blend ingredients until smooth."],
+        "image": "https://images.unsplash.com/photo-1603619256463-e7509054c068",
+        "category": 7
+      },
+      {
+        "id": 41,
+        "name": "Chicken Satay",
+        "description": "Grilled chicken skewers served with a savory peanut sauce.",
+        "ingredients": ["Chicken", "Peanut butter", "Soy sauce", "Spices"],
+        "instructions": ["Marinate chicken, grill on skewers, and serve with peanut sauce."],
+        "image": "https://images.unsplash.com/photo-1590942961282-f9a646072c5e",
+        "category": 1
+      },
+      {
+        "id": 42,
+        "name": "Mushroom Risotto",
+        "description": "Creamy risotto with sautéed mushrooms and Parmesan cheese.",
+        "ingredients": ["Arborio rice", "Mushrooms", "Parmesan", "Broth"],
+        "instructions": ["Cook rice slowly with broth, add mushrooms and cheese."],
+        "image": "https://images.unsplash.com/photo-1602604525744-4e6c821e3d93",
+        "category": 2
+      },
+      {
+        "id": 43,
+        "name": "Peach Cobbler",
+        "description": "A sweet dessert with peaches and a biscuit topping.",
+        "ingredients": ["Peaches", "Flour", "Sugar", "Butter"],
+        "instructions": ["Prepare peach filling, top with biscuit dough, and bake."],
+        "image": "https://images.unsplash.com/photo-1592823464685-930e5cf3b27b",
+        "category": 3
+      },
+      {
+        "id": 44,
+        "name": "Eggplant Parmesan",
+        "description": "Breaded eggplant slices baked with marinara sauce and mozzarella cheese.",
+        "ingredients": ["Eggplant", "Marinara sauce", "Mozzarella", "Breadcrumbs"],
+        "instructions": ["Bread and bake eggplant, top with sauce and cheese, and bake again."],
+        "image": "https://images.unsplash.com/photo-1604444265388-99baf536a335",
+        "category": 2
+      },
+      {
+        "id": 45,
+        "name": "Baked Ziti",
+        "description": "A hearty pasta dish with ziti, marinara sauce, and melted cheese.",
+        "ingredients": ["Ziti", "Marinara sauce", "Cheese", "Ground beef"],
+        "instructions": ["Combine cooked ziti with sauce and meat, top with cheese, and bake."],
+        "image": "https://images.unsplash.com/photo-1585673362634-3a46c07f6217",
+        "category": 2
+      },
+      {
+        "id": 46,
+        "name": "Lentil Soup",
+        "description": "A nutritious soup made with lentils, carrots, and celery.",
+        "ingredients": ["Lentils", "Carrots", "Celery", "Broth"],
+        "instructions": ["Simmer lentils with vegetables and broth until tender."],
+        "image": "https://images.unsplash.com/photo-1588177359032-6387ae1d4b8d",
+        "category": 5
+      },
+      {
+        "id": 47,
+        "name": "Bulgur Salad",
+        "description": "A light salad made with bulgur wheat, herbs, and vegetables.",
+        "ingredients": ["Bulgur", "Tomatoes", "Cucumber", "Parsley"],
+        "instructions": ["Cook bulgur and mix with chopped vegetables and herbs."],
+        "image": "https://images.unsplash.com/photo-1575930264719-4d0b36f3e1e2",
+        "category": 4
+      },
+      {
+        "id": 48,
+        "name": "Garlic Bread",
+        "description": "Crispy bread topped with garlic butter and herbs.",
+        "ingredients": ["Bread", "Butter", "Garlic", "Parsley"],
+        "instructions": ["Spread butter and garlic on bread, bake until crispy."],
+        "image": "https://images.unsplash.com/photo-1584036846594-86e2d54cf1c4",
+        "category": 1
+      },
+      {
+        "id": 49,
+        "name": "Beef Stroganoff",
+        "description": "Tender beef strips cooked in a creamy mushroom sauce.",
+        "ingredients": ["Beef", "Mushrooms", "Cream", "Onion"],
+        "instructions": ["Cook beef and mushrooms, add cream and seasonings, and serve over noodles."],
+        "image": "https://images.unsplash.com/photo-1566745451-6e31d1ea7852",
+        "category": 2
+      },
+      {
+        "id": 50,
+        "name": "Greek Salad",
+        "description": "A fresh salad with cucumbers, tomatoes, olives, and feta cheese.",
+        "ingredients": ["Cucumber", "Tomatoes", "Olives", "Feta cheese"],
+        "instructions": ["Combine ingredients and toss with olive oil and herbs."],
+        "image": "https://images.unsplash.com/photo-1579020702545-7e3c8cf1de71",
+        "category": 4
+      }
+    ]
+  }
+  
