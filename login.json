@@ -27,6 +27,12 @@
       "email": "updatedemail@example.com",
       "password": "12345678",
       "profileImage": "newimagepath.jpg"
+    },
+    {
+      "id": "6e31",
+      "username": "Melci",
+      "email": "melci@gmail.com",
+      "password": "12345678"
     }
   ]
 }
