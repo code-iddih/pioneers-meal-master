@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './FeedbackForm.css';
+import Footer from "./Footer";
 
 function FeedbackForm() {
   const [feedback, setFeedback] = useState('');
@@ -43,6 +44,7 @@ function FeedbackForm() {
         {isSubmitting ? 'Submitting...' : 'Submit Feedback'}
       </button>
       {message && <p className={`feedback-message ${isSubmitting ? 'submitting' : ''}`}>{message}</p>}
+      <Footer />
     </form>
   );
 }
