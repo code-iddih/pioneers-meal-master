@@ -1,4 +1,4 @@
-/* Navbar container styling */
+
 .navbar {
   background-color: black;
   padding: 10px 20px;
@@ -11,18 +11,17 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Logo container styling */
 .logo-container {
   margin-right: 30px;
 }
 
-/* Navbar logo styling */
+
 .navbar-logo {
   height: 40px;
   display: block;
 }
 
-/* Navbar list styling */
+
 .navbar ul {
   list-style: none;
   padding: 0;
@@ -32,12 +31,12 @@
   justify-content: center;
 }
 
-/* Navbar list item styling */
+
 .navbar li {
   margin: 0 20px;
 }
 
-/* Navbar link styling */
+
 .navbar-link {
   text-decoration: none;
   color: #fff;
@@ -47,12 +46,11 @@
   transition: color 0.3s, background-color 0.3s;
 }
 
-/* Hover effect for links */
+
 .navbar-link:hover {
   color: orange;
 }
 
-/* Hover effect underline */
 .navbar-link::after {
   content: "";
   position: absolute;
@@ -66,14 +64,14 @@
   transition: transform 0.3s ease;
 }
 
-/* Show the underline on hover */
+
 .navbar-link:hover::after {
   transform: scaleX(1);
 }
 
-/* Active link styling */
+
 .navbar-link.active {
-  background-color: orange;
+  background-color: #ff6600;
   color: #fff;
   border-radius: 4px;
   padding: 5px 10px;
