@@ -1,5 +1,5 @@
-// src/components/FeedbackForm.js
 import React, { useState } from 'react';
+import Footer from "./Footer";
 
 function FeedbackForm() {
   const [feedback, setFeedback] = useState('');
@@ -22,6 +22,7 @@ function FeedbackForm() {
         required 
       />
       <button type="submit">Submit Feedback</button>
+      <Footer /> 
     </form>
   );
 }

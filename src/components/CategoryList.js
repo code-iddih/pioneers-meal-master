@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './CategoryList.css';
+import Footer from "./Footer";
 
 function CategoryList() {
   const [categories, setCategories] = useState([]);
@@ -34,6 +35,7 @@ function CategoryList() {
           </li>
         ))}
       </ul>
+      <Footer /> 
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
+import Footer from "./Footer";
 
 function MealPlan() {
   const [date, setDate] = useState(new Date());
@@ -13,6 +14,7 @@ function MealPlan() {
         value={date}
       />
       <p>Selected Date: {date.toDateString()}</p>
+      <Footer /> 
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Footer from "./Footer";
 
 function Search() {
   const [query, setQuery] = useState('');
@@ -54,6 +55,7 @@ function Search() {
           )}
         </ul>
       )}
+      <Footer /> 
     </div>
   );
 }

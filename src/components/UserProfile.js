@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { AuthContext } from './AuthContext';
 import './UserProfile.css';
 import { FaPen } from 'react-icons/fa';
+import Footer from "./Footer";
 
 function UserProfile() {
     const { isLoggedIn, logout } = useContext(AuthContext);
@@ -188,6 +189,7 @@ function UserProfile() {
                     Sign Out
                 </button>
             </div>
+            <Footer /> 
         </div>
     );
 }
