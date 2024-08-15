@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
-
+import './CategoryList.css';
 
 function CategoryList() {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('/api/categories')
+    axios.get('http://localhost:3002/categories') 
       .then(response => {
         setCategories(response.data);
         setLoading(false);
@@ -25,9 +26,11 @@ function CategoryList() {
       <h1>Categories</h1>
       <ul>
         {categories.map(category => (
-          <li key={category.idCategory}>
-            <h2>{category.strCategory}</h2>
-            <img src={category.strCategoryThumb} alt={category.strCategory} />
+          <li key={category.id}>
+            <Link to={`/categories/${category.id}`}>
+              <h2>{category.name}</h2>
+              <img src={category.image} alt={category.name} />
+            </Link>
           </li>
         ))}
       </ul>
