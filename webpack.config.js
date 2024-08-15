@@ -49,15 +49,14 @@ module.exports = {
     },
     compress: true,
     port: 3000,
-    historyApiFallback: true,  
-    proxy: [
-      {
-        context: ['/api'],
-        target: 'http://localhost:5000',
+    historyApiFallback: true,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3001',
         secure: false,
         changeOrigin: true,
-        pathRewrite: { '^/api': '' },
+        pathRewrite: { '^/api': '' }, 
       },
-    ],
+    },
   },
 };
