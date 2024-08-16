@@ -6,6 +6,7 @@ import Home from './components/Home';
 import CategoryList from './components/CategoryList';
 import CategoryDetail from './components/CategoryDetail';
 import RecipeList from './components/RecipeList';
+import RecipeDetail from './components/RecipeDetail';
 import UserProfile from './components/UserProfile';
 import MealPlan from './components/MealPlan';
 import Login from './components/Login';
@@ -29,6 +30,7 @@ const App = () => {
                   <Route path="/categories" element={<CategoryList />} />
                   <Route path="/categories/:id" element={<CategoryDetail />} />
                   <Route path="/recipes" element={<RecipeList />} />
+                  <Route path="/recipes/:id" element={<RecipeDetail />} /> 
                   <Route path="/profile" element={<UserProfile />} />
                   <Route path="/meal-plan" element={<MealPlan />} />
                   <Route path="/feedback" element={<FeedbackForm />} />
