@@ -32,8 +32,8 @@
 }
 
 .category-detail li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px); 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
 }
 
 .category-detail img {
