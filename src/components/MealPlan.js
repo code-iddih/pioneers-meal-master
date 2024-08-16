@@ -4,13 +4,12 @@ import Footer from "./Footer";
 import 'react-calendar/dist/Calendar.css';
 import './MealPlan.css';
 
-
-
 function MealPlan() {
   const [date, setDate] = useState(new Date());
   const [notes, setNotes] = useState({});
+  const [savedNotes, setSavedNotes] = useState({});
 
-  //  the note input
+  // Handle note input change
   const handleNoteChange = (event) => {
     setNotes({
       ...notes,
@@ -18,9 +17,16 @@ function MealPlan() {
     });
   };
 
+  const handleSave = () => {
+    setSavedNotes({
+      ...savedNotes,
+      [date.toDateString()]: notes[date.toDateString()],
+    });
+  };
+
   return (
     <div className="meal-plan-container">
-      <h2>Meal Plan</h2>
+      <h1>Meal Plan</h1>
       <div className="calendar-container">
         <Calendar
           onChange={setDate}
@@ -35,8 +41,18 @@ function MealPlan() {
           onChange={handleNoteChange}
           placeholder="Enter your meal plan notes here..."
         />
+        <button onClick={handleSave}>Save</button>
       </div>
-      <Footer  />
+      <div className="saved-notes-container">
+        <h3>Saved Notes</h3>
+        {Object.entries(savedNotes).map(([date, note]) => (
+          <div key={date} className="saved-note">
+            <h4>{date}</h4>
+            <p>{note}</p>
+          </div>
+        ))}
+      </div>
+      <Footer />
     </div>
   );
 }
