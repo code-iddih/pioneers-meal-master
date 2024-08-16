@@ -30,7 +30,7 @@ const Home = () => {
       <section className="restaurant-info">
         <h2>About Us</h2>
         <p>
-          Meal Master was established in 2023, with a passion for delivering
+          Meal Master was established in 2024, with a passion for delivering
           exceptional culinary experiences. Over the years, we have grown to
           become a beloved destination for food enthusiasts. With a team of over
           50 dedicated staff members, we strive to provide the best service and
