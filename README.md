@@ -56,7 +56,8 @@ Copy code
 npm start
 This will launch the app in your default browser, typically accessible at http://localhost:3000.
 
-Development
+## Development
+
 To contribute to the project or make changes:
 
 Create a New Branch:
