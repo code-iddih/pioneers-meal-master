@@ -1,32 +1,48 @@
-Meal Master
-Overview
+# Meal Master
+
+## Overview
+
 Meal Master is a React application that allows users to explore various meal categories, view recipes, and manage their meal plans. The app fetches data from a local db.json file using json-server for a fast and simple backend solution.
 
-Features
-Category List: Browse different meal categories.
-Category Detail: View meals under a specific category.
-Recipe Details: View detailed recipes including ingredients and instructions.
-Search: Search for recipes or categories.
-User Profile: View and manage user profile information.
-Meal Plan: Plan your meals using a calendar interface.
-Feedback Form: Submit feedback about the app.
-Login: User login functionality.
-Setup Instructions
-Prerequisites
-Node.js and npm installed on your machine.
-json-server for serving the local db.json file.
-Installation
+## GROUP NAME : PIONEERS
+
+### Group members :
+
+1. Alexandar Karanja\
+2. Nonzamo Mwende
+3. Melchior Balthazar\
+4. Eric Nyamwaya
+
+## Features
+
+Category List: Browse different meal categories.\
+Category Detail: View meals under a specific category.\
+Recipe Details: View detailed recipes including ingredients and instructions.\
+Search: Search for recipes or categories.\
+User Profile: View and manage user profile information.\
+Meal Plan: Plan your meals using a calendar interface.\
+Feedback Form: Submit feedback about the app.\
+Login: User login functionality.\
+
+## Setup Instructions.
+
+### Prerequisites.
+
+Node.js and npm installed on your machine.\
+json-server for serving the local db.json file.\
+
+## Installation
 Clone the Repository:
 
-Copy code
-git clone https://github.com/Thazar-r/Meal-Master.git
-cd Meal-Master
-Install Dependencies:
+Copy code.\
+git clone https://github.com/pioneers-meal-master.git\
+cd Meal-Master\
+Install Dependencies:\
 
 Copy code
 npm install
 
-tart json-server:
+Start json-server:
 
 In a separate terminal window, start the json-server to serve db.json:
 
@@ -65,4 +81,6 @@ No Recipes Displayed: Ensure that json-server is running and the API endpoint is
 Search Not Working: Verify that the search logic in Search.js matches the structure of your db.json.
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+
 
