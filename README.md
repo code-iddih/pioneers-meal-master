@@ -35,7 +35,7 @@ json-server for serving the local db.json file.\
 Clone the Repository:
 
 Copy code.\
-git clone https://github.com/pioneers-meal-master.git\
+git clone https://github.com/code-iddih/pioneers-meal-master\
 cd Meal-Master\
 Install Dependencies:\
 
