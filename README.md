@@ -8,9 +8,9 @@ Meal Master is a React application that allows users to explore various meal cat
 
 ### Group members :
 
-1. Alexandar Karanja\
+1. Alexandar Karanja
 2. Nonzamo Mwende
-3. Melchior Balthazar\
+3. Melchior Balthazar
 4. Eric Nyamwaya
 
 ## Features
