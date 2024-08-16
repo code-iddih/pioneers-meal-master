@@ -22,7 +22,7 @@ function UserProfile() {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await fetch('/api/users'); 
+                const response = await fetch('http://localhost:3001/users'); 
                 const users = await response.json();
                 const currentUser = users.find(user => user.username === 'kil'); 
 
@@ -67,7 +67,7 @@ function UserProfile() {
     const handleSubmit = async (e) => {
         e.preventDefault(); 
         try {
-            const response = await fetch(`/api/users/${user.id}`, { 
+            const response = await fetch(`http://localhost:3001/users${user.id}`, { 
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
