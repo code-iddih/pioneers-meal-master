@@ -77,7 +77,7 @@ Create a Pull Request:
 
 Go to the GitHub repository and open a new pull request.
 
-Troubleshooting
+## Troubleshooting
 No Recipes Displayed: Ensure that json-server is running and the API endpoint is correct.
 Search Not Working: Verify that the search logic in Search.js matches the structure of your db.json.
 License
