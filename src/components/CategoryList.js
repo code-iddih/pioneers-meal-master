@@ -10,7 +10,7 @@ function CategoryList() {
   const [filteredCategories, setFilteredCategories] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3002/categories')
+    axios.get('https://meals-rrih.onrender.com/categories')
       .then(response => {
         setCategories(response.data);
         setFilteredCategories(response.data);

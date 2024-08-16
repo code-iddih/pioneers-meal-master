@@ -11,7 +11,7 @@ const RecipeDetail = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(`http://localhost:3002/recipes/${id}`)
+    axios.get(`https://meals-rrih.onrender.com/recipes/${id}`)
       .then(response => {
         setRecipe(response.data);
         setLoading(false);

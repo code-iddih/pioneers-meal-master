@@ -11,7 +11,7 @@ function RecipeList() {
   const [filteredRecipes, setFilteredRecipes] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3002/recipes')
+    axios.get('https://meals-rrih.onrender.com/recipes')
       .then(response => {
         setRecipes(response.data);
         setFilteredRecipes(response.data); 

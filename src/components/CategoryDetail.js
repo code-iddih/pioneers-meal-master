@@ -9,7 +9,7 @@ function CategoryDetail() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:3002/recipes') 
+    axios.get('https://meals-rrih.onrender.com/recipes') 
       .then(response => {
         const filteredRecipes = response.data.filter(recipe => recipe.category === parseInt(idCategory));
         setRecipes(filteredRecipes);

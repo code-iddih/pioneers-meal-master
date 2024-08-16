@@ -35,7 +35,7 @@ function Login() {
       return;
     }
     try {
-      const response = await fetch('http://localhost:3001/users', {
+      const response = await fetch('https://users1-o2el.onrender.com/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ function Login() {
       return;
     }
     try {
-      const response = await fetch('http://localhost:3001/users');
+      const response = await fetch('https://users1-o2el.onrender.com/users');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
