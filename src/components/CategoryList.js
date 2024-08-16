@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Footer from './Footer';
 import './CategoryList.css';
@@ -50,11 +49,11 @@ function CategoryList() {
         </div>
         <ul>
           {filteredCategories.map(category => (
-            <li key={category.id}>
-              <Link to={`/categories/${category.id}`}>
+            <li key={category.id} className="category-item">
+              <div>
                 <img src={category.image} alt={category.name} />
                 <h2>{category.name}</h2>
-              </Link>
+              </div>
             </li>
           ))}
         </ul>
