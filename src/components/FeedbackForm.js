@@ -3,10 +3,12 @@ import './FeedbackForm.css';
 import Footer from "./Footer";
 
 function FeedbackForm() {
+  // The sttate to manage feedback input, submission status, and display messages
   const [feedback, setFeedback] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
 
+  // This will handle submission of the form
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -19,6 +21,7 @@ function FeedbackForm() {
     setIsSubmitting(true);
     setMessage('');
 
+    // Submission process and message
     setTimeout(() => {
       console.log('Feedback submitted:', feedback);
       setFeedback('');
@@ -27,6 +30,7 @@ function FeedbackForm() {
     }, 2000);
   };
 
+  // what is rendered
   return (
     <form onSubmit={handleSubmit} className="feedback-form">
       <h2>Feedback</h2>

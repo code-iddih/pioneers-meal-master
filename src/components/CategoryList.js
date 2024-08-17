@@ -4,11 +4,13 @@ import Footer from './Footer';
 import './CategoryList.css';
 
 function CategoryList() {
+  // The state will store the list of categories, search query, and loading status
   const [categories, setCategories] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(true);
   const [filteredCategories, setFilteredCategories] = useState([]);
 
+  // fetching categories
   useEffect(() => {
     axios.get('https://meals-rrih.onrender.com/categories')
       .then(response => {
@@ -22,6 +24,7 @@ function CategoryList() {
       });
   }, []);
 
+  // Filtering of categories searched
   const handleSearch = (e) => {
     const query = e.target.value.toLowerCase();
     setSearchQuery(query);
@@ -35,6 +38,7 @@ function CategoryList() {
 
   if (loading) return <p>Loading...</p>;
 
+  // what will be rendered after
   return (
     <div className="category-list-container">
       <div className="category-list">

@@ -8,6 +8,7 @@ const categories = [];
 const meals = [];
 
 const Home = () => {
+  // Accessing the Current User in the system
   const { user } = useContext(AuthContext);
 
   return (

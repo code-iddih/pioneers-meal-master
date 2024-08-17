@@ -8,6 +8,7 @@ import Footer from "./Footer";
 
 
 function Login() {
+  //Setting Varianles for inpputs and messages
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -15,26 +16,32 @@ function Login() {
   const [mode, setMode] = useState('signin');
   const { login } = useContext(AuthContext);
 
+  // validating if the email is ok
   const isValidEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
+  //Validating the sign-in process
   const handleSignUp = async (e) => {
     e.preventDefault();
+    // checking empty inputs
     if (username.trim() === '' || email.trim() === '' || password.trim() === '') {
       setMessage('All fields are required.');
       return;
     }
+    // checks if email is valid
     if (!isValidEmail(email)) {
       setMessage('Please enter a valid email.');
       return;
     }
+    // Makinf sure the password is more than 7 characyyers
     if (password.length < 8) {
       setMessage('Password must be at least 8 characters long.');
       return;
     }
     try {
+      // sending signupninfo to the server while checking
       const response = await fetch('https://users1-o2el.onrender.com/users', {
         method: 'POST',
         headers: {
@@ -43,6 +50,7 @@ function Login() {
         body: JSON.stringify({ username, email, password }),
       });
       if (response.ok) {
+        // clearing the inputs
         setMessage('Registration successful! You can now SignIn...');
         setUsername('');
         setEmail('');
@@ -55,13 +63,16 @@ function Login() {
     }
   };
 
+  //handling sigin process
   const handleSignIn = async (e) => {
     e.preventDefault();
+    //checking for fields which are empty
     if (username.trim() === '' || password.trim() === '') {
       setMessage('Username and password are required.');
       return;
     }
     try {
+      // Fetching users
       const response = await fetch('https://users1-o2el.onrender.com/users');
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -74,6 +85,7 @@ function Login() {
         const user = users.find(
           (user) => user.username === username && user.password === password
         );
+        // Logging in the user and storing his informatio
         login({
           name: user.username,
           email: user.email,
@@ -87,6 +99,7 @@ function Login() {
     }
   };
 
+  // Form submission handling
   const handleSubmit = (e) => {
     e.preventDefault();
     if (mode === 'signin') {
@@ -96,6 +109,7 @@ function Login() {
     }
   };
 
+  // What tto render
   return (
     <div className="App">
       <div className="container">

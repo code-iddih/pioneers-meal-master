@@ -5,11 +5,13 @@ import './RecipeList.css';
 import Footer from "./Footer";
 
 function RecipeList() {
+  // setting states to store and manage therecipe list
   const [recipes, setRecipes] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(true);
   const [filteredRecipes, setFilteredRecipes] = useState([]);
 
+  //fetching recipes 
   useEffect(() => {
     axios.get('https://meals-rrih.onrender.com/recipes')
       .then(response => {
@@ -23,6 +25,7 @@ function RecipeList() {
       });
   }, []);
 
+  // Handling search by filtering
   const handleSearch = (e) => {
     const query = e.target.value.toLowerCase();
     setSearchQuery(query);
@@ -36,8 +39,10 @@ function RecipeList() {
     setFilteredRecipes(results);
   };
 
+  //while still loading
   if (loading) return <p>Loading...</p>;
 
+  // whatt to render
   return (
     <div className="recipe-list">
       <h1>Recipes</h1>

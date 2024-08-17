@@ -4,13 +4,19 @@ import axios from 'axios';
 import './CategoryDetail.css';
 
 function CategoryDetail() {
+
+  // Get the category ID from the url
   const { idCategory } = useParams();
+
+  // TSetting states to help store recipes and Loading status
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  //fetching the recipes
   useEffect(() => {
     axios.get('https://meals-rrih.onrender.com/recipes') 
       .then(response => {
+        // Filtering recipes
         const filteredRecipes = response.data.filter(recipe => recipe.category === parseInt(idCategory));
         setRecipes(filteredRecipes);
         setLoading(false);
@@ -23,6 +29,7 @@ function CategoryDetail() {
 
   if (loading) return <p>Loading...</p>;
 
+  // rendering the recipes now - the display 
   return (
     <div className="category-detail">
       <h1>Recipes</h1>

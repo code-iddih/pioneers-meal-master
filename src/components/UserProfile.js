@@ -7,18 +7,21 @@ import Footer from "./Footer";
 function UserProfile() {
     const { isLoggedIn, logout } = useContext(AuthContext);
     const [user, setUser] = useState({
+        // setting defalt state of user
         id: '',
         username: '',
         email: '',
         password: '',
         profileImage: 'https://via.placeholder.com/150', 
     });
+    // State to track which fields are being edited
     const [isEditing, setIsEditing] = useState({
         name: false,
         email: false,
         password: false,
     });
 
+    // fetching user and checking if he is logged in
     useEffect(() => {
         const fetchUserData = async () => {
             try {
@@ -37,11 +40,13 @@ function UserProfile() {
             }
         };
 
+        // Only fetch user data if the user is logged in
         if (isLoggedIn) {
             fetchUserData();
         }
     }, [isLoggedIn]);
 
+    // Handle input field changes for user data
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setUser(prevUser => ({
@@ -50,6 +55,7 @@ function UserProfile() {
         }));
     };
 
+    //handling the change of profile picture
     const handleProfilePictureChange = (e) => {
         const file = e.target.files[0];
         if (file) {
@@ -64,6 +70,7 @@ function UserProfile() {
         }
     };
 
+    // Handle form submission to update user profile
     const handleSubmit = async (e) => {
         e.preventDefault(); 
         try {
@@ -98,6 +105,7 @@ function UserProfile() {
         }
     };
 
+    // rendering 
     return (
         <div className="user-profile-container">
             <div className="user-profile-card">

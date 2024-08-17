@@ -5,6 +5,7 @@ import 'react-calendar/dist/Calendar.css';
 import './MealPlan.css';
 
 function MealPlan() {
+  // setting states for date notes and saved notes
   const [date, setDate] = useState(new Date());
   const [notes, setNotes] = useState({});
   const [savedNotes, setSavedNotes] = useState({});
@@ -17,6 +18,7 @@ function MealPlan() {
     });
   };
 
+  // saving notes
   const handleSave = () => {
     setSavedNotes({
       ...savedNotes,
@@ -24,6 +26,7 @@ function MealPlan() {
     });
   };
 
+    //what to render
   return (
     <div className="meal-plan-container">
       <h1>Meal Plan</h1>

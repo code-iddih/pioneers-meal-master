@@ -5,11 +5,13 @@ import './RecipeDetail.css';
 import { FaArrowLeft } from 'react-icons/fa';
 
 const RecipeDetail = () => {
+  // setting up the details
   const { id } = useParams();
   const navigate = useNavigate(); 
   const [recipe, setRecipe] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  // fetching tHe recipes
   useEffect(() => {
     axios.get(`https://meals-rrih.onrender.com/recipes/${id}`)
       .then(response => {
@@ -22,10 +24,13 @@ const RecipeDetail = () => {
       });
   }, [id]);
 
+  // while still fetching
   if (loading) return <p>Loading...</p>;
 
+  // when it recipe does not exist
   if (!recipe) return <p>Recipe not found.</p>;
 
+  // rendering
   return (
     <div className="recipe-detail">
       <button className="go-back" onClick={() => navigate(-1)}>
