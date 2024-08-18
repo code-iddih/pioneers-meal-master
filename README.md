@@ -22,65 +22,86 @@ Search: Search for recipes or categories.\
 User Profile: View and manage user profile information.\
 Meal Plan: Plan your meals using a calendar interface.\
 Feedback Form: Submit feedback about the app.\
-Login: User login functionality.\
+Login: User login functionality.
 
 ## Setup Instructions.
 
 ### Prerequisites.
 
 Node.js and npm installed on your machine.\
-json-server for serving the local db.json file.\
+json-server for serving the local db.json file.
 
-## Installation
+## Installation.
+Step 1:\
 Clone the Repository:
 
+Step 2:\
 Copy code.\
 git clone https://github.com/code-iddih/pioneers-meal-master\
 cd Meal-Master\
-Install Dependencies:\
+Install Dependencies:
 
-Copy code
+Step 3:\
+Copy code\
 npm install
 
+Step 4:\
 Start json-server:
 
-In a separate terminal window, start the json-server to serve db.json:
-
-Copy code
-npx json-server --watch db.json --port 5000
+In a separate terminal window, start the json-server to serve db.json:\
+Copy code\
+npx json-server --watch db.json --port 5000\
 Run the Development Server:
 
+Step 5:\
 Start the React development server:
-
-Copy code
-npm start
+Copy code\
+npm start\
 This will launch the app in your default browser, typically accessible at http://localhost:3000.
 
 ## Development
 
 To contribute to the project or make changes:
 
-Create a New Branch:
+Step 1:\
+Create a New Branch
 
-Copy code
-git checkout -b feature/your-feature
-Make Changes and Commit:
+Step 2:\
+Copy code\
+git checkout -b feature/your-feature\
+Make Changes and Commit
 
-Copy code
-git add .
-git commit -m "Describe your changes"
-Push to GitHub:
+Step 3:\
+Copy code\
+git add .\
+git commit -m "Describe your changes"\
+Push to GitHub
 
-Copy code
-git push origin feature/your-feature
-Create a Pull Request:
+Step 4:\
+Copy code\
+git push origin feature/your-feature\
+Create a Pull Request
 
+Step 5:\
 Go to the GitHub repository and open a new pull request.
 
 ## Troubleshooting
+
 No Recipes Displayed: Ensure that json-server is running and the API endpoint is correct.
+
 Search Not Working: Verify that the search logic in Search.js matches the structure of your db.json.
 License
+
+## Useful Links
+
+Github Repository : https://github.com/code-iddih/pioneers-meal-master
+
+Demo Video (Youtube) : https://youtu.be/-2I8Oal3QAM?feature=shared
+
+Deployed Link : https://code-iddih.github.io/pioneers-meal-master-web-app/
+
+## License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 
